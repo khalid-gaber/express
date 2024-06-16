@@ -1,0 +1,30 @@
+<%- include('../partials/head') %>
+<div class="py-16 text-lg">
+
+
+    <h2>the new item you inserted:</h2>
+    <div class="bg-fuchsia-300/50 px-2">
+        <table class="w-full text-center">
+            <tr class="border-b border-white border-solid">
+                <th>trader</th>
+                <th>item</th>
+                <th>stock</th>
+                <th>price</th>
+            </tr>
+            <tr>
+                <td><%= trader %></td>
+                <td><%= item %></td>
+                <td><%= stock || 'not specified' %></td>
+                <td><%= price || 'not specified' %></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<button onclick='window.location.href = "/products"'
+class="p-2 hover:cursor-pointer font-bold text-lg bg-rose-700/50 hover:bg-rose-700/70 w-full"
+>
+    see products
+</button>
+
+<%- include('../partials/foot') %>

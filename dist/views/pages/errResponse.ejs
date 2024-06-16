@@ -1,0 +1,15 @@
+<%- include('../partials/head') %>
+<div class="py-16 text-lg">
+    <p class="pb-2"><%= /^(\w|\s)+:\s?/.exec(message)[0] %></p> 
+    <% message.replace(/^(\w|\s)+:\s?/, "").split(',').forEach((m,i) => { %>
+        <%= i+1 + ') ' + m %><br>
+    <% }) %><br> 
+</div>
+
+<button onclick="history.back()"
+class="p-2 hover:cursor-pointer font-bold text-lg bg-rose-700/50 hover:bg-rose-700/70 w-full"
+>
+    re-insert products
+</button>
+
+<%- include('../partials/foot') %>

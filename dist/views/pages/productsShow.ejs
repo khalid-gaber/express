@@ -1,0 +1,33 @@
+<%- include('../partials/head') %>
+
+<thead></thead>
+
+<div style="max-height: 60vh" class="p-2 bg-fuchsia-300/50 rounded-lg text-lg overflow-auto text-center">
+    <table class="w-full text-center">
+        <thead class="border-b border-white border-solid text-xl">
+            <th># of <%= size %></th>
+            <th>product</th>
+            <th>price</th>
+            <th>trader</th>
+        </thead>
+        <tbody>
+            <% products.forEach((p, i) => { %>
+                <tr class="odd:bg-fuchsia-300/80">
+                    <td><%= i+1 %></td>
+                    <td><%= p.item %></td>
+                    <td><%= p.price %></td>
+                    <td><%= p.trader %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <% if (true) { %>
+        <!--  -->
+    <div class="btn-container inline-block w-10 h-10 p-2 rotate-90">
+        <button onclick="fetchMore(event, '<%= size %>')" class="fetch-more w-7 rounded leading-5 text-base bg-rose-700/50 hover:bg-rose-700/70">>></button>
+    </div>
+    <% } %>
+</div>
+
+<%- include('../partials/foot') %>
+<script src="/javascript/show.js"></script>

@@ -1,0 +1,34 @@
+<%- include('../partials/head') %>
+
+    <form name="insert" action="/products" method="post" class="form flex flex-col gap-4 py-5">
+        <div class="input-container">
+            <label for="item" >item name</label>
+            <input type="text"  name="item" id="item">
+            <span>valid</span>
+        </div>
+        <div class="input-container">
+            <label for="trader">trader name</label>
+            <input type="text" name="trader" id="trader">
+            <span>valid</span>
+        </div>
+        <div class="input-container">
+            <label for="stock">stock</label>
+            <input type="number" min="0" name="stock" id="stock">
+            <span>valid</span>
+        </div>
+        <div class="input-container">
+            <label for="price">price </label>
+            <input type="number" min="1" name="price" id="price">
+            <span>valid</span>
+        </div>
+        <div class="input-container">
+            <label for="tags">tags(category)</label>
+            <input placeholder="e.g: computers,Dell,2015" type="text" name="tags" id="tags">
+            <span>valid</span>
+        </div>
+        <input type="submit" value="insert" class="p-2 hover:cursor-pointer font-bold text-lg">
+    </form>
+
+<%- include('../partials/foot') %>
+<script src="/javascript/insert.js"></script>
+

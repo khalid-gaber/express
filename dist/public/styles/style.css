@@ -1,0 +1,92 @@
+:root {
+    --primary: 107 , 33, 168;
+    --sec: 190, 18, 60;
+    --success: greenyellow;
+    --error: red;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/images/wallpaper.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .full-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} */
+
+.form-container {
+    /* width: 80%;
+    max-width: 650px;
+    padding: 20px; */
+    background-color: rgba(var(--primary), .7);
+}
+
+/* .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} */
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.input-container input {
+    background-color: rgba(234, 184, 243, 0.5);
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 5px;
+}
+
+.input-container input:focus {
+    border-bottom-color: white;
+}
+
+
+.form input[type='submit']  {
+    background-color: rgba(var(--sec), .5);
+    /* margin-top: auto; */
+}
+
+.form input[type='submit']:hover {
+    background-color: rgba(var(--sec), .7);
+}
+
+.input-container > span {
+    display: none;
+    font-size: .8rem;
+    line-height: .8rem;
+}
+
+.input-container.success input {
+    border-color: var(--success);
+}
+
+.input-container.success > span {
+    color: var(--success);
+    display: block;
+}
+
+.input-container.error input {
+    border-color: var(--error);
+}
+
+.input-container.error > span {
+    color: var(--error);
+    display: block;
+}
